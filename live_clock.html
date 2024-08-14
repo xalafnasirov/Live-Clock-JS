@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blogs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h2>Real time clock</h2>
+    <span id="time">Time</span>
+    <script>
+        function updateTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            $('#time').text(hours + ":" + minutes + ":" + seconds);
+        }
+
+        setInterval(updateTime, 1000);
+
+        updateTime();
+    </script>
+</body>
+</html>
